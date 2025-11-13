@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rubel Siddique — Video Editor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1117;
+      --fg: #f5f5f5;
+      --muted: #a0a0a0;
+      --accent: #38bdf8;
+      --glass: rgba(255, 255, 255, 0.06);
+      --blur: 12px;
+      font-family: 'Inter', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(900px 600px at 20% 30%, rgba(56,189,248,0.05), transparent), linear-gradient(180deg, var(--bg), #06080c);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .card {
+      backdrop-filter: blur(var(--blur));
+      background: var(--glass);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 640px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      margin-top: 6px;
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--muted);
+    }
+    p {
+      margin: 16px 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .skill {
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-weight: 500;
+      color: var(--fg);
+      font-size: 14px;
+    }
+    .contact {
+      margin-top: 30px;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 8px;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--fg);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 14px;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .contact a:hover {
+      background: var(--accent);
+      color: #000;
+      transform: translateY(-2px);
+    }
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Rubel Siddique</h1>
+    <h2>Video Editor at The Daily Star, Bangladesh</h2>
+    <p>With over 8 years of professional experience, I craft engaging and cinematic stories for broadcast and digital media. Passionate about storytelling, pacing, and visual rhythm, I bring ideas to life through precise editing and creative design.</p>
+
+    <div class="skills">
+      <div class="skill">Adobe Premiere Pro</div>
+      <div class="skill">Adobe After Effects</div>
+      <div class="skill">Adobe Photoshop</div>
+      <div class="skill">Adobe Illustrator</div>
+    </div>
+
+    <div class="contact">
+      <p>📧 <a href="mailto:personal@rubel.qzz.io">personal@rubel.qzz.io</a></p>
+      <a href="http://facebook.com/ABSRubelSiddique" target="_blank">Facebook</a>
+      <a href="https://linkedin.com/in/rubelsiddique" target="_blank">LinkedIn</a>
+      <a href="https://instagram.com/rubel__siddique" target="_blank">Instagram</a>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Rubel Siddique — All rights reserved
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
